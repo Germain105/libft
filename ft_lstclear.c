@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gepatric <gepatric@student.42.fr>          +#+  +:+       +#+        */
+/*   By: germainp <germainp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 12:23:32 by gepatric          #+#    #+#             */
-/*   Updated: 2026/04/23 19:20:31 by gepatric         ###   ########.fr       */
+/*   Updated: 2026/04/24 00:28:50 by germainp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,17 @@
 void    ft_lstclear(t_list **lst, void (*del)(void *))
 {
     t_list *current; 
-
+    t_list *next; 
+    
+    if (!lst || !del)
+        return ; 
     current = *lst; 
-    while (current->next)
+    while (current)
     {
-        current = current->next; 
-        del(current);      
+        next = current->next; 
+        del(current->content);
+        free(current); 
+        current = next;       
     }
+    *lst = NULL; 
 }
