@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gepatric <gepatric@student.42.fr>          +#+  +:+       +#+        */
+/*   By: germainp <germainp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 11:01:39 by gepatric          #+#    #+#             */
-/*   Updated: 2026/04/23 11:06:52 by gepatric         ###   ########.fr       */
+/*   Updated: 2026/04/25 23:07:12 by germainp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_isin(char c, const char *set)
 
 char	*ft_strtrim(const char *s1, const char *set)
 {
-	int		i;
+	size_t		i;
 	size_t	start;
 	size_t	len;
 	char	*strtrim;
@@ -38,13 +38,12 @@ char	*ft_strtrim(const char *s1, const char *set)
 	len = ft_strlen(s1);
 	while (s1[start] && ft_isin(s1[start], set))
 		start++;
-	--len;
-	while (len > 0 && ft_isin(s1[len], set))
-		--len;
-	strtrim = malloc(sizeof(char) * ((len - start) + 2));
+	while (len > start && ft_isin(s1[len - 1], set))
+		len--;
+	strtrim = malloc(sizeof(char) * ((len - start + 1)));
 	if (!strtrim)
 		return (NULL);
-	while (start <= len)
+	while (start < len)
 		strtrim[i++] = s1[start++];
 	strtrim[i] = '\0';
 	return (strtrim);

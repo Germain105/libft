@@ -6,7 +6,7 @@
 /*   By: germainp <germainp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 17:39:01 by gepatric          #+#    #+#             */
-/*   Updated: 2026/04/23 22:40:46 by germainp         ###   ########.fr       */
+/*   Updated: 2026/04/25 23:06:20 by germainp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
+	size_t	i;
 
 	i = ft_strlen(s);
 	if ((char)c == '\0')

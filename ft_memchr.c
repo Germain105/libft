@@ -6,7 +6,7 @@
 /*   By: germainp <germainp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 17:52:09 by gepatric          #+#    #+#             */
-/*   Updated: 2026/04/24 00:07:51 by germainp         ###   ########.fr       */
+/*   Updated: 2026/04/25 22:47:49 by germainp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ void	*ft_memchr(const void *s, int c, size_t n)
 			return ((void *)(unsigned char *)s + i);
 		i++;
 	}
-	return (0);
+	return (NULL);
 }

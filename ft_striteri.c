@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gepatric <gepatric@student.42.fr>          +#+  +:+       +#+        */
+/*   By: germainp <germainp@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 13:04:33 by gepatric          #+#    #+#             */
-/*   Updated: 2026/04/23 11:47:41 by gepatric         ###   ########.fr       */
+/*   Updated: 2026/04/25 21:06:23 by germainp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,11 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	size_t	i;
 
 	i = 0;
-	while (i < ft_strlen(s))
+	if (!s || !f)
+		return ; 
+	while (s[i])
 	{
-		f(i, s);
+		f(i, &s[i]);
 		i++;
 	}
 }
