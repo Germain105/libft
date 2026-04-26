@@ -5,7 +5,7 @@
     - The goal of this project is to create our own function library, to understand how many C functions work. 
     - It's proves to be very useful for any type of project or for other functions.    
 
-# PART 1 : LIBC FUNCTION
+### PART 1 : LIBC FUNCTION
 
     - isalpha : Check if a character is alphabetic
     - isdigit : Check if a character is a digit
@@ -29,7 +29,7 @@
     - calloc : Allocates (with malloc(3)) memory for an array of elements and initializes all bytes to 0
     - strdup : Copy of a string, duplicates it, and returns a pointer to the new string
 
-# PART 2 : ADDITIONAL FUNCTION
+### PART 2 : ADDITIONAL FUNCTION
 
     - substr : Allocates (with malloc(3)) and returns a substring from the string s The substring begins at index ’start’ and is of maximum size len
     - strjoin : Allocates (with malloc(3)) and returns a new string, which is the result of the concatenation of s1 and s2
@@ -44,7 +44,7 @@
     - putnbr_fd : Outputs the integer n to the given file descriptor
 
 
-# PART 3 LINKED LIST 
+### PART 3 LINKED LIST 
 
     - lstnew : Allocates memory (using malloc(3)) and returns a new node. The ’content’ member variable is initialized with the given parameter ’content’. The variable ’next’ is initialized to NULL
     - lstadd_front : Adds the node ’new’ at the beginning of the list
@@ -59,21 +59,21 @@
 
 All prototype of functions & struct (for PART 3) in "libft.h" 
 
-### Instruction 
+# Instruction 
 
     - for compilation : 
 
     - For test a function we need to make a main.
     - For compile : gcc -Wall -Wextra -Werror
  
-# Makefile commands :
+### Makefile commands :
 
     - make all : run with gcc & flags for compile, create libft.a and archived all .c to .o 
     - make clean : remove all file .o
     - make fclean : remove all files .o & libft.a
     - make re : remove libft.a & *.o and <make all>
 
-### Resources  
+# Resources  
 
     - Manual of terminal 
     - Manual internet (koor, IBM, etc... )
