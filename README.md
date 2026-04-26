@@ -1,9 +1,9 @@
 *This activity has been created as part of the 42 curriculum by <gepatric>*
 
-### Description 
+# Description 
 
-The goal of this project is to create our own function library, to understand how many C functions work. 
-It's proves to be very useful for any type of project or for other functions.    
+    - The goal of this project is to create our own function library, to understand how many C functions work. 
+    - It's proves to be very useful for any type of project or for other functions.    
 
 # PART 1 : LIBC FUNCTION
 
@@ -61,10 +61,10 @@ All prototype of functions & struct (for PART 3) in "libft.h"
 
 ### Instruction 
 
-## for compilation
+    - for compilation : 
 
-For test a function we need to make a main.
-For compile : gcc -Wall -Wextra -Werror
+    - For test a function we need to make a main.
+    - For compile : gcc -Wall -Wextra -Werror
  
 # Makefile commands :
 
