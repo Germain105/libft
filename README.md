@@ -61,7 +61,7 @@ All prototype of functions & struct (for PART 3) in "libft.h"
 
 # Instruction 
 
-    - FOR COMPILATION : 
+#### FOR COMPILATION : 
 
     - For test a function we need to make a main.
     - For compile : gcc -Wall -Wextra -Werror
